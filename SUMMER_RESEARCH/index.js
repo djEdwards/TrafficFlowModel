@@ -65,10 +65,10 @@ function makeCorsRequest() {
 }
 
 
-function preload(){
+// function preload(){
 
-	car = loadImage('http://clipart-library.com/images/yckKzbAoi.png');
-}
+// 	car = loadImage('http://clipart-library.com/images/yckKzbAoi.png');
+// }
 
 	class Vehicle{//car constructor
 		constructor(x,y){
@@ -146,12 +146,12 @@ function preload(){
 			}
 
 			show(color){
-				// stroke(200);
-				// strokeWeight(1);
-				// fill(0,0,color);
-				// rect(this.x,this.y,10,10);
+				stroke(200);
+				strokeWeight(1);
+				fill(0,0,color);
+				rect(this.x,this.y,10,10);
 
-				image(car,this.x,this.y);
+// 				image(car,this.x,this.y);
 			}
 
 
