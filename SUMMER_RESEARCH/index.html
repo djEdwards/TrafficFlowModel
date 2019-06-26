@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>MODEL</title>
+	<script src="index.js "></script>
+	<script src="p5.min.js"></script>
+
+<style>
+.button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.button2 {background-color: #008CBA;} /* Blue */
+.button3 {background-color: #f44336;} /* Red */ 
+.button4 {background-color: #e7e7e7; color: black;} /* Gray */ 
+.button5 {background-color: #555555;} /* Black */
+
+p.solid {
+	border-style: solid;
+    margin-left: 0%;
+    margin-right: 83%;
+
+}
+
+
+</style>
+
+<script>
+
+
+var timerVar = setInterval(countTimer, 1000);
+var totalSeconds = 0;
+
+function countTimer() {
+   ++totalSeconds;
+   var hour = Math.floor(totalSeconds /3600);
+   var minute = Math.floor((totalSeconds - hour*3600)/60);
+   var seconds = totalSeconds - (hour*3600 + minute*60);
+
+   document.getElementById("timer").innerHTML ='hours: '+ hour + " | minutes: " + minute + " | seconds: " + seconds;
+}
+
+</script>
+</head>
+<body>
+<div>
+
+	
+	<p id="timer"class="solid"></p>
+
+
+<button class="button button3" onclick="clearInterval(timerVar)">Stop time</button>
+
+</div>
+
+<div>
+<button class="button" onclick="setup()">Reset</button>
+
+<button class="button button3" onclick="stop()">Stop</button>
+
+
+
+</div>
+
+
+</body>
+</html>
