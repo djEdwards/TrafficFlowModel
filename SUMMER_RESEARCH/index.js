@@ -18,57 +18,13 @@ let vehicle5;
 
 var numOfCars;
 
-function createCORSRequest(method, url) {
-  var xhr = new XMLHttpRequest();
-  if ("withCredentials" in xhr) {
-    // XHR for Chrome/Firefox/Opera/Safari.
-    xhr.open(method, url, true);
-  } else if (typeof XDomainRequest != "undefined") {
-    // XDomainRequest for IE.
-    xhr = new XDomainRequest();
-    xhr.open(method, url);
-  } else {
-    // CORS not supported.
-    xhr = null;
-  }
-  return xhr;
+
+
+
+function preload(){
+
+	car = loadImage('car2.png');
 }
-
-// Helper method to parse the title tag from the response.
-function getTitle(text) {
-  return text.match('<title>(.*)?</title>')[1];
-}
-
-// Make the actual CORS request.
-function makeCorsRequest() {
-  // This is a sample server that supports CORS.
-  var url = 'http://html5rocks-cors.s3-website-us-east-1.amazonaws.com/index.html';
-
-  var xhr = createCORSRequest('GET', url);
-  if (!xhr) {
-    alert('CORS not supported');
-    return;
-  }
-
-  // Response handlers.
-  xhr.onload = function() {
-    var text = xhr.responseText;
-    var title = getTitle(text);
-    alert('Response from CORS request to ' + url + ': ' + title);
-  };
-
-  xhr.onerror = function() {
-    alert('Woops, there was an error making the request.');
-  };
-
-  xhr.send();
-}
-
-
-// function preload(){
-
-// 	car = loadImage('http://clipart-library.com/images/yckKzbAoi.png');
-// }
 
 	class Vehicle{//car constructor
 		constructor(x,y){
@@ -146,12 +102,12 @@ function makeCorsRequest() {
 			}
 
 			show(color){
-				stroke(200);
-				strokeWeight(1);
-				fill(0,0,color);
-				rect(this.x,this.y,10,10);
+				// stroke(200);
+				// strokeWeight(1);
+				// fill(0,0,color);
+				// rect(this.x,this.y,10,10);
 
-// 				image(car,this.x,this.y);
+				image(car,this.x,this.y,30,30);
 			}
 
 
@@ -235,11 +191,11 @@ setTimeout(function() {
 
 
 
-	if (d1 < 25){
+	if (d1 < 35){
 		console.log('d1 = '+ d1 +' car 1 is braking...');
 		vehicle1.stop();
 	}
-	else if (d1>=25&&d1<=50){
+	else if (d1>=35&&d1<=50){
 
 		console.log('d1 = '+ d1+ ' car 1 is moving...');
 		vehicle1.move();
@@ -256,11 +212,11 @@ setTimeout(function() {
 
 
 
-	if (d2 < 25){
+	if (d2 < 35){
 		console.log('d2 = '+ d2 +' car 2 is braking...');
 		vehicle2.brake();
 	}
-		else if (d2>=25&&d2<=50){
+		else if (d2>=35&&d2<=50){
 			console.log('d2 = '+ d2 +' car 2 is moving...');
 			vehicle2.move();
 		
@@ -276,11 +232,11 @@ setTimeout(function() {
 	}
 
 
-	if (d3 < 25){
+	if (d3 < 35){
 		console.log('d3 = '+ d3 +' car 3 is braking...');
 		vehicle3.brake();
 	}
-		else if (d3>=25&&d3<=50){
+		else if (d3>=35&&d3<=50){
 		console.log('d3 = '+ d3 +' car 3 is moving...');
 		vehicle3.move();
 
@@ -295,11 +251,11 @@ setTimeout(function() {
 	}
 
 
-	if (d4 < 25){
+	if (d4 < 35){
 		console.log('d4 = '+ d4 +' car 4 is braking...');
 		vehicle4.brake();
 	}
-else if (d4>=25&&d4<=50){
+else if (d4>=35&&d4<=50){
 	console.log('d4 = '+ d4 +' car 4 is moving...');
 	vehicle4.move();
 		
