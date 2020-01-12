@@ -1,3 +1,3 @@
 # TrafficFlowModel
 
-I will add more here about what my project really is.
+Traffic jams seem like an omnipresent issue in our country and around the world. Today, encountering traffic is as inevitable as paying taxes.The overall field of jamology is an example of “big data science”. Any accredited traffic flow model has to obtain and process mountains of data points in order to create accurate representations of reality. It is the act of processing all of the collected data is how scientists can make accurate predictions of time of arrival, where to install stop lights vs. stop signs, and what the speed limit should be given the location. Overall, research within this field improves the experiences and conditions we have on the road each day. With that being said I have created a program that roughly simulates the jamology phenomenon: Phantom Traffic. The languages used are Javascript, HTML, CSS, and a library called p5.js.
